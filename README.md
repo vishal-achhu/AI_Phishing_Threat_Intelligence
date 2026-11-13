@@ -106,24 +106,3 @@ Developed a Python-based email security application to identify phishing indicat
 
 Only claim API integration as completed after testing it with an authorized API key. Clearly describe the blocklist as simulated.
 
-## Interview talking points
-
-1. **What problem does it solve?** It assists analysts in triaging suspicious emails by surfacing explainable indicators and extracting IOCs for investigation.
-2. **How is the score calculated?** Each transparent heuristic adds a weight; the sum is capped at 100 and mapped to a risk band.
-3. **Does a high score prove phishing?** No. It is a prioritization signal. Analysts must validate the sender, destination, authentication and surrounding context.
-4. **How are IOCs extracted?** Regular expressions identify URL, IPv4 and hash-shaped strings; URL parsing identifies hostnames.
-5. **How does VirusTotal fit?** The optional API provides reputation context for supported indicators. A lack of detections is not proof of safety.
-6. **What does the response module do?** It proposes safe incident-handling steps and maintains an in-app simulated blocklist. It does not change real network controls.
-7. **How is AI used safely?** The local playbook works offline. Optional LLM explanations are constrained to supplied evidence and must be reviewed by an analyst.
-8. **What would you improve?** Add MIME parsing, attachment sandbox integration, IDN homograph detection, SPF/DKIM/DMARC parsing from raw headers, labeled dataset evaluation and role-based case management.
-
-## Demo checklist
-
-- [ ] Run the app and load Sample A.
-- [ ] Verify risk indicators and score display.
-- [ ] Load Sample B and compare the lower-risk result.
-- [ ] Inspect a URL with a raw IP or URL shortener.
-- [ ] Extract IOCs from a sample message.
-- [ ] Generate local Copilot explanation without API credentials.
-- [ ] Generate a response plan and add an indicator to the simulated blocklist.
-- [ ] Capture genuine screenshots of the running application.
