@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Sample A \u2014 Suspicious account verification",
+    "subject": "URGENT: Verify your account immediately",
+    "sender": "security-alert@example-mail.test",
+    "headers": "From: security-alert@example-mail.test\nReply-To: helpdesk@different-domain.test\nAuthentication-Results: spf=fail; dkim=fail",
+    "body": "Your account will be suspended within 24 hours. Verify your account and sign in at http://198.51.100.77/secure-login to avoid losing access. Enter your password and OTP."
+  },
+  {
+    "name": "Sample B \u2014 Routine internal notice",
+    "subject": "Team meeting agenda for Thursday",
+    "sender": "calendar@example.test",
+    "headers": "From: calendar@example.test\nAuthentication-Results: spf=pass; dkim=pass",
+    "body": "Hello team, the agenda for Thursday's project meeting is attached. Please review the discussion topics before the meeting."
+  },
+  {
+    "name": "Sample C \u2014 Suspicious invoice request",
+    "subject": "Payment overdue \u2014 invoice attached",
+    "sender": "billing@vendor-payment.test",
+    "headers": "From: billing@vendor-payment.test\nReply-To: accounts@unrelated-mail.test\nAuthentication-Results: spf=softfail",
+    "body": "Action required. Your payment is overdue. Please review the invoice and update bank details at https://secure-update.example.test/billing."
+  }
+]
